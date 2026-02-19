@@ -1,0 +1,148 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+* {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+table,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+  border: none;
+}
+
+body {
+  padding: 35px;
+  line-height: 1;
+  font-size: 1em;
+  background: #404040;
+  color: #000;
+}
+
+button {
+  padding-block: unset;
+  padding-inline: unset;
+  padding: 13px 10px;
+  width: calc(100% / 3 - 9px);
+  color: #000;
+  font-weight: 600;
+  font-family:
+    "pretendard", "Noto Sans KR", "sans-serif", system-ui, "-apple-system",
+    "Segoe UI", "Roboto";
+  background-color: #fff;
+  border: none;
+  border-radius: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+button:hover,
+button.active {
+  color: #fff;
+  background: #161616;
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.container button + button {
+  margin: 0 0 0 13px;
+}
+
+#my_video {
+  width: 100%;
+  margin: 25px auto 0;
+  display: block;
+  height: auto;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 25px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.video-wrapper.paused .video-overlay {
+  opacity: 1;
+}
+
+.video-wrapper.playing:hover .video-overlay {
+  opacity: 1;
+}
+
+.play-icon,
+.pause-icon {
+  color: white;
+  font-size: 150px;
+  font-weight: bold;
+}
+.pause-icon {
+  margin: 0 0 35px 0;
+}
+
+.play-icon {
+  margin-left: 25px;
+}
+
+@media (max-width: 500px) {
+  button {
+    padding: 7px 5px;
+  }
+}
