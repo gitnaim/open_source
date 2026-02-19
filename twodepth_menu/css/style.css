@@ -1,0 +1,128 @@
+@charset "utf-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+table,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+ul,
+ol {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  vertical-align: top;
+  border: none;
+}
+body {
+  font-family:
+    "pretendard", "Noto Sans KR", "sans-serif", system-ui, "-apple-system",
+    "Segoe UI", "Roboto";
+  font-size: 1em;
+  background: #404040;
+}
+
+/* 1Depth */
+.container {
+  min-width: 900px;
+}
+nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  color: #333;
+}
+nav::after {
+  content: "";
+  position: absolute;
+  top: 63px;
+  width: 100%;
+  height: 1px;
+  background-color: #f4f4f4;
+}
+nav > ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 64px;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: height 0.4s;
+}
+
+nav > ul.active {
+  height: 320px;
+}
+
+nav > ul > li {
+  position: relative;
+}
+
+nav > ul > li > a {
+  padding: 0 35px;
+  display: block;
+  position: relative;
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #333;
+}
+nav > ul > li > a.active {
+  color: #ff9800;
+}
+nav > ul > li > a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  height: 2px;
+  background-color: #ff9800;
+}
+
+/* 2Depth */
+nav li ul {
+  position: absolute;
+  left: 50%;
+  top: 80px;
+  transform: translateX(-50%);
+  min-width: 150px;
+}
+
+nav li ul li a {
+  display: block;
+  padding: 5px 0;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 400;
+  color: #444;
+}
+
+nav li ul li a:hover,
+nav li ul li a:focus {
+  color: #ff9800;
+}
